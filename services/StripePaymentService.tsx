@@ -1,6 +1,6 @@
 export const createCheckoutSession = async (amount: number, paymentPeriod: string) => {
   try {
-    const response = await fetch('http://localhost:3001/stripe/create-checkout-session', {
+    const response = await fetch('https://checkout-be.onrender.com/stripe/create-checkout-session', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -17,7 +17,7 @@ export const createCheckoutSession = async (amount: number, paymentPeriod: strin
 
 export const createPaymentWithConfiguration = async (amount: number, paymentPeriod: string, paymentMethodConfigurationId: string) => {
   try {
-    const response = await fetch('http://localhost:3001/stripe/create-payment-intent', {
+    const response = await fetch('https://checkout-be.onrender.com/stripe/create-payment-intent', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
